@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaStar } from "react-icons/fa";
+import { FaStar } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { addTocart } from '../Redux/Slices/CartSlice';
 import toast, { Toaster } from 'react-hot-toast';
