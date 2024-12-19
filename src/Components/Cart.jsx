@@ -4,8 +4,12 @@ import { IoMdClose } from "react-icons/io";
 import {useSelector} from 'react-redux'
 import CartSlice from '../Redux/Slices/CartSlice';
 import { FaCartShopping } from "react-icons/fa6";
+import {useNavigate} from 'react-router-dom'
+import Success from '../Pages/Success'
 
 function Cart() {
+
+  const Navigate = useNavigate();
 
   const [isActive,setIsActive] = useState(false)
 
@@ -39,8 +43,10 @@ function Cart() {
         <h3>Total Items: {TotalQty}</h3>
         <h3>Total Amount: {TotalAmount}</h3>
         <hr className='mb-3'/>
-        <button className='bg-green-500 rounded-lg p-1 font-semibold hover:bg-green-600 text-xl hover:text-white w-[90vw] lg:w-[20vw]'>CheckOut</button>
-      </div>
+        <button 
+        onClick={()=> Navigate("./Success")}
+         className={`bg-green-500 rounded-lg p-1 font-semibold hover:bg-green-600 text-xl hover:text-white w-[90vw] lg:w-[20vw] `}>CheckOut</button>
+      </div>Total
 
     </div>
     <FaCartShopping onClick={()=> setIsActive(!isActive)} className={` fixed bottom-10 text-5xl  right-4 bg-white rounded-full p-3 ${CartItems.length>0 && "animate-bounce delay-500"  }`} />
