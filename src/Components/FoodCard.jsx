@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaStar } from 'react-icons/fa';
+import { FaStar } from  '/node_modules/react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { addTocart } from '../Redux/Slices/CartSlice';
 import toast, { Toaster } from 'react-hot-toast';
@@ -28,7 +28,7 @@ function FoodCard({id,name,img,price,rating,desc,category,handleToast}) {
       <button
           onClick={() => {
             dispatch(
-              addTocart({ id, name, price, rating, price, img, qty: 1 })
+              addTocart({ id, name,  rating, price, img, qty: 1 })
             );
             handleToast(name);
           }} className='p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm'>Add to Cart</button>
