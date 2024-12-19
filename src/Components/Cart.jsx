@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ItemCard from './ItemCard';
-import { IoMdClose } from "react-icons/io";
+import { MdClose } from "react-icons/md";
 import {useSelector} from 'react-redux'
 import CartSlice from '../Redux/Slices/CartSlice';
 import { FaCartShopping } from "react-icons/fa6";
@@ -24,7 +24,7 @@ function Cart() {
     <div className={`lg:w-[23vw] w-full h-full bg-white fixed top-0 right-0  ${isActive ? "translate-x-0" : "translate-x-full"} transistion-all z-50 duration-500 `}>
       <div className='flex justify-between items-center p-3 mt-2'>
         <span className='font-bold text-gray-700'> Your Order</span>
-        <IoMdClose onClick={()=> setIsActive(!isActive)} className='border-2 border-gray-600 hover:text-red-600 hover:border-red-600 rounded-md cursor-pointer mb-3' />
+        <MdClose onClick={()=> setIsActive(!isActive)} className='border-2 border-gray-600 hover:text-red-600 hover:border-red-600 rounded-md cursor-pointer mb-3' />
       </div>
 
       {CartItems.length > 0 ?
