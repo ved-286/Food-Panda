@@ -5,14 +5,13 @@ import { removeFromCart } from '../Redux/Slices/CartSlice';
 import { useDispatch } from 'react-redux';
 import { incremeantQty,decreamentQty } from '../Redux/Slices/CartSlice';
 import toast, { Toaster } from 'react-hot-toast';
-import {useNavigate} from 'react-router-dom'
-import Success from '../Pages/Success'
+
 
 function ItemCard({id,img,price,name,qty}) {
 
     
   const dispatch = useDispatch();
-  const Navigate = useNavigate();
+  
 
   return (
     <>

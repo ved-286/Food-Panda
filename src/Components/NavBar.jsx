@@ -12,6 +12,7 @@ function NavBar() {
         <div className='mb-3'>
        <h3 className='text-2xl font-bold text-gray-500'>{new Date().toUTCString().slice(0,16)}</h3>
        <h3 className='text-2xl font-bold text-gray-900'>Food Panda</h3>
+       <img className='w-[100px] h-[100px] absolute top-3 left-[150px]' src="./panda.png" alt="" />
        </div>
        <div>
         <input 

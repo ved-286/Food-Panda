@@ -46,7 +46,7 @@ function Cart() {
         <button 
         onClick={()=> Navigate("./Success")}
          className={`bg-green-500 rounded-lg p-1 font-semibold hover:bg-green-600 text-xl hover:text-white w-[90vw] lg:w-[20vw] `}>CheckOut</button>
-      </div>Total
+      </div>
 
     </div>
     <FaCartShopping onClick={()=> setIsActive(!isActive)} className={` fixed bottom-10 text-5xl  right-4 bg-white rounded-full p-3 ${CartItems.length>0 && "animate-bounce delay-500"  }`} />
